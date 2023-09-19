@@ -29,3 +29,22 @@ form {
     align-items: center;
     margin-top: 5vh;
 }
+
+form input:not([type="submit"]) {
+    width: clamp(10vw, 15vw, 20vw);
+    margin-right: 6px;
+    background-color: #797c7a;    /* kolor do inputów z pojawiającymi się zadaniami #656967 */
+    color: #fbfbfb;
+    box-shadow: none;
+}
+
+::placeholder {
+    color: #c5c7c6;
+}
+
+form input {
+    font-size: 20px;
+    padding: 5px;
+    height: 5vh;
+    border-radius: 6px;
+}
