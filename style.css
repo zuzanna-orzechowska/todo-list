@@ -13,6 +13,7 @@ body {
     color: #fbfbfb;
 }
 
+/* styling in header */
 h1 {
     font-size: 2.5rem;
     display: flex;
@@ -33,7 +34,7 @@ form {
 form input:not([type="submit"]) {
     width: clamp(10vw, 15vw, 20vw);
     margin-right: 6px;
-    background-color: #797c7a;    /* kolor do inputów z pojawiającymi się zadaniami #656967 */
+    background-color: #797c7a;
     color: #fbfbfb;
     box-shadow: none;
 }
@@ -42,9 +43,43 @@ form input:not([type="submit"]) {
     color: #c5c7c6;
 }
 
+#new-task-submit {
+    background-color: #fbfbfb;
+    font-weight: bold;
+}
+
+#new-task-submit:hover {
+    background-color: #00C853;          /* #F9A825 - button do editu / #FF3D00 - button do deletu  */
+    color: #fbfbfb;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
 form input {
     font-size: 20px;
     padding: 5px;
     height: 5vh;
     border-radius: 6px;
+}
+
+/* styling in main */
+.item > input[type="text"] {
+   display: flex;
+   justify-content: center;
+   background-color: #656967;
+   color: #fbfbfb;
+}
+
+.edit-button:hover {
+    background-color: #F9A825;
+    color: #fbfbfb;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #FF3D00;
+    color: #fbfbfb;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
