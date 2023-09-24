@@ -49,7 +49,7 @@ form input:not([type="submit"]) {
 }
 
 #new-task-submit:hover {
-    background-color: #00C853;          /* #F9A825 - button do editu / #FF3D00 - button do deletu  */
+    background-color: #00C853;          
     color: #fbfbfb;
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -63,13 +63,6 @@ form input {
 }
 
 /* styling in main */
-.item > input[type="text"] {
-   display: flex;
-   justify-content: center;
-   background-color: #656967;
-   color: #fbfbfb;
-}
-
 .edit-button:hover {
     background-color: #F9A825;
     color: #fbfbfb;
@@ -82,4 +75,39 @@ form input {
     color: #fbfbfb;
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+}
+
+.item {                 /*TUTAJ NIE MOGĘ TEGO NA ŚRODKU USTAWIĆ */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 6px;
+    background-color: #555755;
+    max-width: 600px;
+    margin-top: 5vh;
+}
+
+.item:last-of-type {
+    margin-bottom: 0;
+}
+
+.item input[type="checkbox"] {
+    margin-right: 1rem;
+}
+
+.item input[type="text"] {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fbfbfb;
+    font-size: 20px;
+    flex: 1 1 0%;
+    margin-right: 1rem;
+}
+
+.item.completed input[type="text"] {
+    opacity: 0.5;
+    text-decoration: line-through;
 }
