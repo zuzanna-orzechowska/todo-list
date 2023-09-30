@@ -91,7 +91,7 @@ form input {
     margin-bottom: 0;
 }
 
-.item input[type="checkbox"] {
+.checkbox {      /* */
     margin-right: 1rem;
 }
 
@@ -111,7 +111,7 @@ form input {
     text-decoration: line-through;
 }
 
-input[type="checkbox"] {
+.checkbox{      /* */
     width: 20px;
     height: 20px;
     background-color: #fbfbfb;

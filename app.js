@@ -16,6 +16,12 @@ form.addEventListener("submit", (e) => {
     const task_element = document.createElement("div");
     task_element.classList.add("item");
 
+    const checkbox = document.createElement("input"); // DLACZEGO OD TĄD
+    checkbox.type = "checkbox";
+    checkbox.classList.add("checkbox");
+
+    task_element.appendChild(checkbox);    // DO TĄD TEN CHECKBOX ODSUWA TAK DALEKO TEKST :<
+
     const task_content_element = document.createElement("div");
     task_content_element.classList.add("content");
     task_content_element.innerText = task;
@@ -34,11 +40,11 @@ form.addEventListener("submit", (e) => {
     task_buttons.classList.add("actions");
 
     const edit_button = document.createElement("button");
-    edit_button.classList.add("edit-button");
-    edit_button.innerHTML = "edit";             // TUTAJ MI NIE POKAZUJE TERAZ TYCH ICON    
+    edit_button.classList.add("material-symbols-outlined", "edit-button");
+    edit_button.innerHTML = "edit";   
 
     const delete_button = document.createElement("button");
-    delete_button.classList.add("delete-button");
+    delete_button.classList.add("material-symbols-outlined", "delete-button");
     delete_button.innerHTML = "delete";
 
     task_buttons.appendChild(edit_button);      // adding buttons
@@ -47,4 +53,8 @@ form.addEventListener("submit", (e) => {
     task_element.appendChild(task_buttons);
 
     list_element.appendChild(task_element);                 // applying to page
+
+    input.value = "";
+
+// edit and delete button
 })
